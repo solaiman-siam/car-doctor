@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car-Doctor</title>
+    <link rel="shortcut icon" href="icons/Group 1.svg" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <style>
+        .font-inter {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#FF3811',
+                        "dark1": '#151515',
+                        "dark2": '#737373',
+                        "dark3": '#444',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="font-inter">
+    
+    <!---------------------------------- Header Section -------------------------------->
+
+    <header class="container mx-auto lg:px-28 px-8">
+        <nav class="pt-6">
+            <div class="navbar bg-base-100">
+                <div class="navbar-start">
+                    <div class="dropdown">
+                        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h8m-8 6h16" />
+                            </svg>
+                        </div>
+                        <ul tabindex="0"
+                            class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                            <li><a>Item 1</a></li>
+                            <li>
+                                <a>Parent</a>
+                                <ul class="p-2">
+                                    <li><a>Submenu 1</a></li>
+                                    <li><a>Submenu 2</a></li>
+                                </ul>
+                            </li>
+                            <li><a>Item 3</a></li>
+                        </ul>
+                    </div>
+                    <div class="flex flex-col items-center text-xl font-bold text-dark3">
+                        <img class="w-20 pb-1" src="icons/Group 1.svg" alt="">
+                        <h4>Car Doctor</h4>
+                    </div>
+                </div>
+                <div class="navbar-center hidden lg:flex">
+                    <ul class="menu menu-horizontal pr-[6.7rem] text-base font-semibold text-dark3">
+                        <li><a class="hover:text-primary hover:bg-transparent ">Home</a></li>
+                        <li><a class="hover:text-primary hover:bg-transparent">About</a></li>
+                        <li><a class="hover:text-primary hover:bg-transparent">Services</a></li>
+                        <li><a class="hover:text-primary hover:bg-transparent">Blog</a></li>
+                        <li><a class="hover:text-primary hover:bg-transparent">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="navbar-end space-x-7">
+                    <img class="w-5" src="icons/cart.svg" alt="">
+                    <img class="w-5" src="icons/search.svg" alt="">
+
+                    <a
+                        class="btn border border-primary bg-transparent hover:bg-primary hover:text-white text-primary">Appointment</a>
+                </div>
+            </div>
+        </nav>
+
+        <section class="mt-8">
+            <div
+                class="w-full h-[520px] bg-[linear-gradient(90deg,rgba(0,0,0,0.5),rgba(0,0,0,0.3)),url('./assets/images/banner/5.jpg')] bg-center bg-cover rounded-lg text-white p-24 space-y-7 flex justify-center flex-col">
+                <h1 class="text-6xl font-bold leading-[70px]">Affordable<br> Price For Car<br> Servicing</h1>
+                <p class="w-1/2 capitalize ">
+                    There are many variations of passages of available, but the majority have suffered alteration in
+                    some form
+                </p>
+
+                <div class="space-x-4">
+                    <button class="text-lg font-semibold px-5 py-3.5 bg-primary rounded-md">Discover More</button>
+                    <button
+                        class="text-lg font-semibold px-5 py-[13px] hover:bg-primary transition-all duration-300 border border-white rounded-md">Latest
+                        Project</button>
+                </div>
+            </div>
+        </section>
+    </header>
+    <main class="container mx-auto lg:px-28 px-8">
+
+        <!------------------------------- About Us -------------------------------->
+
+        <section class="mt-28">
+            <div class="w-full flex h-[450px] gap-12 justify-center items-center ">
+                <div class="w-1/2 relative">
+                    <div class="w-11/12 h-[400px]  rounded-md">
+                        <img class="h-full rounded-md" src="assets/images/about_us/person.jpg" alt="">
+                    </div>
+                    <div
+                        class="bg-white p-2 w-7/12 h-[270px] absolute rounded-md -bottom-12 right-0 bg-cover bg-center">
+                        <img class="w-full h-full" src="assets/images/about_us/parts.jpg" alt="">
+                    </div>
+                </div>
+                <div class="w-1/2">
+                    <h4 class="text-xl font-bold text-primary pb-5">About Us</h4>
+                    <h3 class="text-[2.7rem] font-bold text-dark1 leading-[50px] pb-7 ">We are qualified<br> & of
+                        experience<br> in this field</h3>
+                    <p class="capitalize text-dark2 pb-5">
+                        There are many variations of passages of Lorem Ipsum available, but the majority have suffered
+                        alteration in some form, by injected humour, or randomised words which don't look even slightly
+                        believable.
+                    </p>
+                    <p class="capitalize text-dark2 pb-7">
+                        the majority have suffered alteration in some form, by injected humour, or randomised words
+                        which don't look even slightly believable.
+                    </p>
+
+                    <button class=" font-semibold px-6  text-lg py-3.5 bg-primary rounded-md text-white">Get More
+                        Info</button>
+
+                </div>
+            </div>
+        </section>
+
+        <!------------------------------- Services Section ----------------------------------->
+
+        <section class="mt-28">
+            <div class="flex flex-col items-center">
+                <h4 class="text-xl font-bold text-primary pb-4">Service</h4>
+                <h3 class="text-[2.7rem] font-bold text-dark1 leading-[50px] pb-5 ">Our Service Area</h3>
+                <p class="capitalize text-dark2 text-center w-8/12">
+                    the majority have suffered alteration in some form, by injected humour, or randomised words which
+                    don't look even slightly believable.
+                </p>
+            </div>
+
+            <div class="mt-12 grid grid-cols-3 gap-6">
+                <div class="border border-[#E8E8E8] rounded-lg p-6 space-y-4">
+                    <img class="rounded-lg " src="assets/images/services/2.jpg" alt="">
+                    <h3 class="text-2xl font-bold text-dark3">Electrical System</h3>
+                    <div class="flex justify-between item-center">
+                        <h4 class="text-xl font-semibold text-primary">Price : $20.00</h4>
+                        <img class="w-5" src="icons/arrow.svg" alt="">
+                    </div>
+                </div>
+                <div class="border border-[#E8E8E8] rounded-lg p-6 space-y-4">
+                    <img class="rounded-lg " src="assets/images/services/4.jpg" alt="">
+                    <h3 class="text-2xl font-bold text-dark3">Engine Diagnostics</h3>
+                    <div class="flex justify-between item-center">
+                        <h4 class="text-xl font-semibold text-primary">Price : $20.00</h4>
+                        <img class="w-5" src="icons/arrow.svg" alt="">
+                    </div>
+                </div>
+                <div class="border border-[#E8E8E8] rounded-lg p-6 space-y-4">
+                    <img class="rounded-lg " src="assets/images/services/6.jpg" alt="">
+                    <h3 class="text-2xl font-bold text-dark3">Auto Car Repair</h3>
+                    <div class="flex justify-between item-center">
+                        <h4 class="text-xl font-semibold text-primary">Price : $20.00</h4>
+                        <img class="w-5" src="icons/arrow.svg" alt="">
+                    </div>
+                </div>
+                <div class="border border-[#E8E8E8] rounded-lg p-6 space-y-4">
+                    <img class="rounded-lg " src="assets/images/services/3.jpg" alt="">
+                    <h3 class="text-2xl font-bold text-dark3">Electrical System</h3>
+                    <div class="flex justify-between item-center">
+                        <h4 class="text-xl font-semibold text-primary">Price : $20.00</h4>
+                        <img class="w-5" src="icons/arrow.svg" alt="">
+                    </div>
+                </div>
+                <div class="border border-[#E8E8E8] rounded-lg p-6 space-y-4">
+                    <img class="rounded-lg " src="assets/images/services/1.jpg" alt="">
+                    <h3 class="text-2xl font-bold text-dark3">Engine Diagnostics</h3>
+                    <div class="flex justify-between item-center">
+                        <h4 class="text-xl font-semibold text-primary">Price : $20.00</h4>
+                        <img class="w-5" src="icons/arrow.svg" alt="">
+                    </div>
+                </div>
+                <div class="border border-[#E8E8E8] rounded-lg p-6 space-y-4">
+                    <img class="rounded-lg " src="assets/images/services/5.jpg" alt="">
+                    <h3 class="text-2xl font-bold text-dark3">Auto Car Repair</h3>
+                    <div class="flex justify-between item-center">
+                        <h4 class="text-xl font-semibold text-primary">Price : $20.00</h4>
+                        <img class="w-5" src="icons/arrow.svg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-center">
+                <button
+                    class=" mt-12 text-lg text-primary  font-semibold px-5 py-3 hover:bg-primary transition-all hover:text-white duration-300 border border-primary rounded-md">Latest
+                    Project</button>
+            </div>
+        </section>
+
+        <!--------------------------- Contact Section --------------------------->
+
+        <section class="mt-28">
+            <div class=" px-16 py-20 bg-[#151515] rounded-lg flex justify-between">
+                <div class="flex gap-5 text-white items-center">
+                    <div>
+                        <img src="icons/timetable.svg" alt="">
+                    </div>
+                    <div class="flex flex-col space-y-1 ">
+                        <p class="font-medium">We are open monday-friday</p>
+                        <h4 class="text-2xl font-bold">7:00 am - 9:00 pm</h4>
+                    </div>
+                </div>
+                <div class="flex gap-5 text-white items-center">
+                    <div>
+                        <img src="icons/call.svg" alt="">
+                    </div>
+                    <div class="flex flex-col space-y-1 ">
+                        <p class="font-medium">We are open monday-friday</p>
+                        <h4 class="text-2xl font-bold">7:00 am - 9:00 pm</h4>
+                    </div>
+                </div>
+                <div class="flex gap-5 text-white items-center">
+                    <div>
+                        <img src="icons/location.svg" alt="">
+                    </div>
+                    <div class="flex flex-col space-y-1 ">
+                        <p class="font-medium">We are open monday-friday</p>
+                        <h4 class="text-2xl font-bold">7:00 am - 9:00 pm</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--------------------------- Products Section  ----------------------------->
+
+        <section class="mt-24">
+            <div class="flex flex-col items-center">
+                <h4 class="text-xl font-bold text-primary pb-4">Popular Products</h4>
+                <h3 class="text-[2.7rem] font-bold text-dark1 leading-[50px] pb-5 ">Browse Our Products</h3>
+                <p class="capitalize text-dark2 text-center w-8/12">
+                    the majority have suffered alteration in some form, by injected humour, or randomised words which
+                    don't look even slightly believable.
+                </p>
+            </div>
+
+            <div class="mt-12 grid grid-cols-3 gap-6">
+                <div class="border border-[#E8E8E8] rounded-lg p-6 space-y-3 flex flex-col items-center">
+                    <div class="bg-[#F3F3F3] h-[250px] w-full rounded-lg flex justify-center p-6">
+                        <img class="rounded-lg  h-full" src="assets/images/products/1.png" alt="">
+                    </div>
+                    <div class="rating rating-md">
+                        <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" />
+                        <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" checked />
+                        <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" />
+                        <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" />
+                        <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" />
+                    </div>
+
+                    <h3 class="text-2xl font-bold text-dark3">Car Engine Plug</h3>
+                    <div class="flex justify-between item-center">
+                        <h4 class="text-xl font-semibold text-primary">Price : $20.00</h4>
+                    </div>
+                </div>
+                <div class="border border-[#E8E8E8] rounded-lg p-6 space-y-3 flex flex-col items-center">
+                    <div class="bg-[#F3F3F3] h-[250px] w-full rounded-lg flex justify-center p-6">
+                        <img class="rounded-lg h-full" src="assets/images/products/2.png" alt="">
+                    </div>
+                    <div class="rating rating-md">
+                        <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" />
+                        <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" checked />
+                        <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" />
+                        <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" />
+                        <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" />
+                    </div>
+
+                    <h3 class="text-2xl font-bold text-dark3">Car Engine Plug</h3>
+                    <div class="flex justify-between item-center">
+                        <h4 class="text-xl font-semibold text-primary">Price : $20.00</h4>
+                    </div>
+                </div>
+                <div class="border border-[#E8E8E8] rounded-lg p-6 space-y-3 flex flex-col items-center">
+                    <div class="bg-[#F3F3F3] h-[250px] w-full rounded-lg flex justify-center p-6">
+                        <img class="rounded-lgh-full" src="assets/images/products/3.png" alt="">
+                    </div>
+                    <div class="rating rating-md">
+                        <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" />
+                        <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" checked />
+                        <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" />
+                        <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" />
+                        <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" />
+                    </div>
+
+                    <h3 class="text-2xl font-bold text-dark3">Car Engine Plug</h3>
+                    <div class="flex justify-between item-center">
+                        <h4 class="text-xl font-semibold text-primary">Price : $20.00</h4>
+                    </div>
+                </div>
+                <div class="border border-[#E8E8E8] rounded-lg p-6 space-y-3 flex flex-col items-center">
+                    <div class="bg-[#F3F3F3] h-[250px] w-full rounded-lg flex justify-center p-6">
+                        <img class="rounded-lg h-full" src="assets/images/products/4.png" alt="">
+                    </div>
+                    <div class="rating rating-md">
+                        <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" />
+                        <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" checked />
+                        <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" />
+                        <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" />
+                        <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" />
+                    </div>
+
+                    <h3 class="text-2xl font-bold text-dark3">Car Engine Plug</h3>
+                    <div class="flex justify-between item-center">
+                        <h4 class="text-xl font-semibold text-primary">Price : $20.00</h4>
+                    </div>
+                </div>
+                <div class="border border-[#E8E8E8] rounded-lg p-6 space-y-3 flex flex-col items-center">
+                    <div class="bg-[#F3F3F3] h-[250px] w-full rounded-lg flex justify-center p-6">
+                        <img class="rounded-lg h-full" src="assets/images/products/5.png" alt="">
+                    </div>
+                    <div class="rating rating-md">
+                        <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" />
+                        <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" checked />
+                        <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" />
+                        <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" />
+                        <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" />
+                    </div>
+
+                    <h3 class="text-2xl font-bold text-dark3">Car Engine Plug</h3>
+                    <div class="flex justify-between item-center">
+                        <h4 class="text-xl font-semibold text-primary">Price : $20.00</h4>
+                    </div>
+                </div>
+                <div class="border border-[#E8E8E8] rounded-lg p-6 space-y-3 flex flex-col items-center">
+                    <div class="bg-[#F3F3F3] h-[250px] w-full rounded-lg flex justify-center p-6">
+                        <img class="rounded-lg  h-full" src="assets/images/products/6.png" alt="">
+                    </div>
+                    <div class="rating rating-md">
+                        <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" />
+                        <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" checked />
+                        <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" />
+                        <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" />
+                        <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" />
+                    </div>
+
+                    <h3 class="text-2xl font-bold text-dark3">Car Engine Plug</h3>
+                    <div class="flex justify-between item-center">
+                        <h4 class="text-xl font-semibold text-primary">Price : $20.00</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-center">
+                <button
+                    class=" mt-12 text-lg text-primary  font-semibold px-5 py-3 hover:bg-primary transition-all hover:text-white duration-300 border border-primary rounded-md">More
+                    Products</button>
+            </div>
+        </section>
+
+        <!------------------------------ Team Section  --------------------------->
+
+        <section class="mt-24">
+            <div class="flex flex-col items-center">
+                <h4 class="text-xl font-bold text-primary pb-4">Team</h4>
+                <h3 class="text-[2.7rem] font-bold text-dark1 leading-[50px] pb-5 ">Meet Our Team</h3>
+                <p class="capitalize text-dark2 text-center w-8/12">
+                    the majority have suffered alteration in some form, by injected humour, or randomised words which
+                    don't look even slightly believable.
+                </p>
+            </div>
+
+            <div class="mt-12 grid grid-cols-3 gap-6">
+                <div class="border border-[#E8E8E8] rounded-lg p-6 space-y-3 flex flex-col items-center">
+                    <div class="bg-[#F3F3F3] h-[230px] rounded-lg">
+                        <img class="rounded-lg  h-full" src="assets/images/team/1.jpg" alt="">
+                    </div>
+                    <h3 class="text-2xl font-bold text-dark3">Car Engine Plug</h3>
+                    <div class="flex justify-between item-center">
+                        <h4 class="text-xl font-semibold text-[#737373]">Engine Expert</h4>
+                    </div>
+                    <div class="flex gap-2 pt-1">
+                        <img src="icons/fb.svg" alt="">
+                        <img src="icons/twitter.svg" alt="">
+                        <img src="icons/linkdin.svg" alt="">
+                        <div class="flex justify-center items-center relative">
+                            <img src="icons/insta-bg.svg" alt="">
+                            <img class="absolute" src="icons/insta.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="border border-[#E8E8E8] rounded-lg p-6 space-y-3 flex flex-col items-center">
+                    <div class="bg-[#F3F3F3] h-[230px] rounded-lg">
+                        <img class="rounded-lg w-full h-full" src="assets/images/team/2.jpg" alt="">
+                    </div>
+                    <h3 class="text-2xl font-bold text-dark3">Car Engine Plug</h3>
+                    <div class="flex justify-between item-center">
+                        <h4 class="text-xl font-semibold text-[#737373]">Engine Expert</h4>
+                    </div>
+                    <div class="flex gap-2 pt-1">
+                        <img src="icons/fb.svg" alt="">
+                        <img src="icons/twitter.svg" alt="">
+                        <img src="icons/linkdin.svg" alt="">
+                        <div class="flex justify-center items-center relative">
+                            <img src="icons/insta-bg.svg" alt="">
+                            <img class="absolute" src="icons/insta.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="border border-[#E8E8E8] rounded-lg p-6 space-y-3 flex flex-col items-center">
+                    <div class="bg-[#F3F3F3] h-[230px] rounded-lg">
+                        <img class="rounded-lg w-full h-full" src="assets/images/team/3.jpg" alt="">
+                    </div>
+                    <h3 class="text-2xl font-bold text-dark3">Car Engine Plug</h3>
+                    <div class="flex justify-between item-center">
+                        <h4 class="text-xl font-semibold text-[#737373]">Engine Expert</h4>
+                    </div>
+                    <div class="flex gap-2 pt-1">
+                        <img src="icons/fb.svg" alt="">
+                        <img src="icons/twitter.svg" alt="">
+                        <img src="icons/linkdin.svg" alt="">
+                        <div class="flex justify-center items-center relative">
+                            <img src="icons/insta-bg.svg" alt="">
+                            <img class="absolute" src="icons/insta.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!----------------------------- Features Section ------------------------->
+
+        <section class="mt-24">
+            <div class="flex flex-col items-center">
+                <h4 class="text-xl font-bold text-primary pb-4">Core Features</h4>
+                <h3 class="text-[2.7rem] font-bold text-dark1 leading-[50px] pb-5 ">Why Choose Us</h3>
+                <p class="capitalize text-dark2 text-center w-8/12">
+                    the majority have suffered alteration in some form, by injected humour, or randomised words which
+                    don't look even slightly believable.
+                </p>
+            </div>
+
+            <div class="mt-12 grid grid-cols-6 gap-6">
+                <div
+                    class="border border-[#E8E8E8] rounded-lg py-7 px-4 space-y-4 flex flex-col items-center h-[145px]">
+                    <img class="w-16" src="assets/icons/group.svg" alt="">
+                    <h4 class="text-base font-bold text-dark3">Expert Team</h4>
+                </div>
+                <div
+                    class="border border-[#E8E8E8] rounded-lg py-7 px-2 space-y-4 flex flex-col items-center bg-primary h-[145px] ">
+                    <img class="w-12" src="assets/icons/Group 38729.svg" alt="">
+                    <h4 class="text-base font-bold text-white">Timely Delivery</h4>
+                </div>
+                <div
+                    class="border border-[#E8E8E8] rounded-lg py-7 px-4 space-y-4 flex flex-col items-center h-[145px]">
+                    <img class="w-10" src="assets/icons/person.svg" alt="">
+                    <h4 class="text-base font-bold text-dark3">24/7 Support</h4>
+                </div>
+                <div
+                    class="border border-[#E8E8E8] rounded-lg py-7 px-2 space-y-4 flex flex-col items-center h-[145px]">
+                    <img class="w-12" src="assets/icons/Wrench.svg" alt="">
+                    <h4 class="text-base font-bold text-dark3">Best Equipment</h4>
+                </div>
+                <div
+                    class="border border-[#E8E8E8] rounded-lg py-7 px-2 space-y-4 flex flex-col items-center h-[145px]">
+                    <img class="w-10" src="assets/icons/check.svg" alt="">
+                    <h4 class="text-base font-bold text-dark3">100% Guranty</h4>
+                </div>
+                <div
+                    class="border border-[#E8E8E8] rounded-lg py-7 px-2 space-y-4 flex flex-col items-center h-[145px]">
+                    <img class="w-14" src="assets/icons/deliveryt.svg" alt="">
+                    <h4 class="text-base font-bold text-dark3">Timely Delivery</h4>
+                </div>
+            </div>
+        </section>
+
+        <!-------------------------- Customer Section -------------------------------------->
+
+        <section class="mt-28">
+            <div class="flex flex-col items-center">
+                <h4 class="text-xl font-bold text-primary pb-4">Core Features</h4>
+                <h3 class="text-[2.7rem] font-bold text-dark1 leading-[50px] pb-5 ">Why Choose Us</h3>
+                <p class="capitalize text-dark2 text-center w-8/12">
+                    the majority have suffered alteration in some form, by injected humour, or randomised words which
+                    don't look even slightly believable.
+                </p>
+            </div>
+            <div class="mt-12 grid grid-cols-2 gap-6">
+                <div class="p-10 border border-[#E8E8E8] rounded-lg ">
+                    <div class="flex justify-between">
+                        <div>
+                            <div class="flex gap-4">
+                                <img class="w-14" src="icons/man1.svg" alt="">
+                                <div>
+                                    <h4 class="text-xl font-bold text-dark3 pb-1">Awlad Hossain</h4>
+                                    <h5 class="text-lg font-semibold text-dark2">Businessman</h5>
+                                </div>
+                            </div>
+                        </div>
+
+                        <img class="w-12" src="icons/quote 1.svg" alt="">
+                    </div>
+                    <p class="text-dark2 capitalize pt-5 pb-5">There are many variations of passages of Lorem Ipsum
+                        available, but the majority have suffered alteration in some form, by injected humour, or
+                        randomised words which don't look even slightly believable. </p>
+                    <div class="rating rating-sm">
+                        <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                        <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" checked />
+                        <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                        <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                        <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                    </div>
+                </div>
+                <div class="p-10 border border-[#E8E8E8] rounded-lg ">
+                    <div class="flex justify-between">
+                        <div>
+                            <div class="flex gap-4">
+                                <img class="w-14" src="icons/man2.svg" alt="">
+                                <div>
+                                    <h4 class="text-xl font-bold text-dark3 pb-1">Awlad Hossain</h4>
+                                    <h5 class="text-lg font-semibold text-dark2">Businessman</h5>
+                                </div>
+                            </div>
+                        </div>
+
+                        <img class="w-12" src="icons/quote 1.svg" alt="">
+                    </div>
+                    <p class="text-dark2 capitalize pt-5 pb-5">There are many variations of passages of Lorem Ipsum
+                        available, but the majority have suffered alteration in some form, by injected humour, or
+                        randomised words which don't look even slightly believable. </p>
+                    <div class="rating rating-sm">
+                        <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                        <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" checked />
+                        <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                        <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                        <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-------------------------------------------- Footer Section ---------------------------------->
+
+    <footer class="mt-28 bg-[#151515] ">
+        <div class="container mx-auto lg:px-28 px-8">
+            <div class="flex justify-between py-28 item">
+                <div class="flex flex-col  items-start w-4/12">
+                    <div class="flex flex-col font-bold text-white text-xl items-center">
+                        <img class="w-20 pb-1" src="icons/logo2.svg" alt="">
+                        <h4>Car Doctor</h4>
+                    </div>
+                    <p class="text-[#E8E8E8] text-base font-normal py-5">Edwin Diaz is a software and web technologies
+                        engineer, a life coach trainer who is also a serial .</p>
+                    <div class="flex gap-2">
+                        <div class="w-10 h-10 bg-[#2c2c2c] rounded-full flex items-center justify-center">
+                            <img src="icons/gpay.png" alt="">
+                        </div>
+                        <div class="w-10 h-10 bg-[#2c2c2c] rounded-full flex items-center justify-center">
+                            <img src="icons/ttr.png" alt="">
+                        </div>
+                        <div class="w-10 h-10 bg-[#2c2c2c] rounded-full flex items-center justify-center">
+                            <img src="icons/inst.png" alt="">
+                        </div>
+                        <div class="w-10 h-10 bg-[#2c2c2c] rounded-full flex items-center justify-center">
+                            <img src="icons/link.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-xl pb-9 text-white">About</h4>
+                    <ul class="space-y-4 text-[#E8E8E8] text-base">
+                        <li><a href="">Home</a></li>
+                        <li><a href="">Service</a></li>
+                        <li><a href="">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-xl pb-9 text-white">Company</h4>
+                    <ul class="space-y-4 text-[#E8E8E8] text-base">
+                        <li><a href="">Why car doctor</a></li>
+                        <li><a href="">About</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-xl pb-9 text-white">Support</h4>
+                    <ul class="space-y-4 text-[#E8E8E8] text-base">
+                        <li><a href="">Support Center</a></li>
+                        <li><a href="">Feedback</a></li>
+                        <li><a href="">Accessebility</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
