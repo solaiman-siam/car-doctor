@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en" class="selection:bg-primary selection:text-white">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car-Doctor</title>
+    <link rel="shortcut icon" href="icons/Group 1.svg" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <style>
+        .font-inter {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#FF3811',
+                        "dark1": '#151515',
+                        "dark2": '#737373',
+                        "dark3": '#444',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="font-inter">
+
+    <!---------------------------------- Header Section -------------------------------->
+
+    <header class="container mx-auto lg:px-28 px-8">
+        <nav class="pt-6">
+            <div class="navbar bg-base-100">
+                <div class="navbar-start">
+                    <div class="dropdown">
+                        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h8m-8 6h16" />
+                            </svg>
+                        </div>
+                        <ul tabindex="0"
+                            class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                            <li><a>Item 1</a></li>
+                            <li>
+                                <a>Parent</a>
+                                <ul class="p-2">
+                                    <li><a>Submenu 1</a></li>
+                                    <li><a>Submenu 2</a></li>
+                                </ul>
+                            </li>
+                            <li><a>Item 3</a></li>
+                        </ul>
+                    </div>
+                    <div class="flex flex-col items-center text-xl font-bold text-dark3">
+                        <img class="w-20 pb-1" src="icons/Group 1.svg" alt="">
+                        <h4>Car Doctor</h4>
+                    </div>
+                </div>
+                <div class="navbar-center hidden lg:flex">
+                    <ul class="menu menu-horizontal pr-[6.7rem] text-base font-semibold text-dark3">
+                        <li><a href="index.html" class="hover:text-primary hover:bg-transparent ">Home</a></li>
+                        <li><a class="hover:text-primary hover:bg-transparent">About</a></li>
+                        <li><a class="hover:text-primary hover:bg-transparent">Services</a></li>
+                        <li><a class="hover:text-primary hover:bg-transparent">Blog</a></li>
+                        <li><a class="hover:text-primary hover:bg-transparent">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="navbar-end space-x-7">
+                    <img class="w-5" src="icons/cart.svg" alt="">
+                    <img class="w-5" src="icons/search.svg" alt="">
+
+                    <a
+                        class="btn border border-primary bg-transparent hover:bg-primary hover:text-white text-primary">Appointment</a>
+                </div>
+            </div>
+        </nav>
+
+        <section class="mt-8">
+            <div
+                class="w-full h-[300px] bg-[linear-gradient(90deg,rgba(0,0,0,0.5),rgba(0,0,0,0.3)),url('./assets/images/checkout/checkout.png')] bg-center bg-cover rounded-lg text-white p-24 space-y-7 flex justify-center flex-col relative">
+                <h1 class="text-white font-bold text-4xl">
+                    Service Details
+                </h1>
+                <div style=" width:330px; border-bottom: 50px solid orangered; border-left:50px solid transparent; border-right: 50px solid transparent"
+                    class="  absolute bottom-0 transform -translate-x-1/2 left-[50%] flex justify-center items-center">
+                    <h4 class="text-xl font-semibold text-white absolute -bottom-[2.4rem]">
+                        Home/Service Details
+                    </h4>
+                </div>
+            </div>
+            </div>
+        </section>
+    </header>
+    <main class="container mx-auto lg:px-28 px-8">
+        
+
+        <!------------------------------- About Us -------------------------------->
+        <section class="mt-28">
+            <div class="grid grid-cols-3 gap-6">
+                <div class="col-span-2">
+                    <div class="h-96 rounded-lg bg-[url(./assets/images/banner/3.jpg)] bg-cover bg-center mb-12"> </div>
+                    <div class="mb-7">
+                        <h4 class="text-3xl font-bold text-dark1 pb-7">Unique Car Engine Service</h4>
+                        <p class="text-dark2">There are many variations of passages of Lorem Ipsum available, but the
+                            majority have suffered alteration in some form, by injected humour, or randomised words
+                            which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum,
+                            you need to be sure there isn't anything embarrassing hidden in the middle of text. </p>
+                    </div>
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class=" bg-primary pt-1 rounded-lg w-full">
+                            <div class=" bottom-0 bg-[#F3F3F3] p-10 rounded-lg ">
+                                <h4 class="font-bold text-lg  pb-3">Instant Car Services</h4>
+                                <p class="leading-7 text-dark2">It uses a dictionary of over 200 Latin words, combined
+                                    with a
+                                    model sentence
+                                    structures.</p>
+                            </div>
+                        </div>
+                        <div class=" bg-primary rounded-lg w-full pt-1">
+                            <div class="w-full bg-[#F3F3F3]  p-10 rounded-lg">
+                                <h4 class="font-bold text-lg  pb-3">I24/7 Quality Service</h4>
+                                <p class="leading-7 text-dark2">It uses a dictionary of over 200 Latin words, combined
+                                    with a
+                                    model sentence
+                                    structures.</p>
+                            </div>
+                        </div>
+                        <div class=" bg-primary rounded-lg w-full pt-1">
+                            <div class="w-full bg-[#F3F3F3]  p-10 rounded-lg ">
+                                <h4 class="font-bold text-lg  pb-3">Easy Customer Service</h4>
+                                <p class="leading-7 text-dark2">It uses a dictionary of over 200 Latin words, combined
+                                    with a
+                                    model sentence
+                                    structures.</p>
+                            </div>
+                        </div>
+                        <div class=" bg-primary rounded-lg w-full pt-1">
+                            <div class="w-full bg-[#F3F3F3]  p-10 rounded-lg ">
+                                <h4 class="font-bold text-lg  pb-3">Quality Cost Service</h4>
+                                <p class="leading-7 text-dark2">It uses a dictionary of over 200 Latin words, combined
+                                    with a
+                                    model sentence
+                                    structures.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <p class="text-dark2 pt-7 pb-12">There are many variations of passages of Lorem Ipsum available, but
+                        the
+                        majority have suffered alteration in some form, by injected humour, or randomised words
+                        which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum,
+                        you need to be sure there isn't anything embarrassing hidden in the middle of text. </p>
+                    <h3 class="text-3xl font-bold text-dark1 pb-7">3 Simple Steps to Process</h3>
+                    <p class="text-dark2 pb-12">There are many variations of passages of Lorem Ipsum available, but
+                        the
+                        majority have suffered alteration in some form, by injected humour, or randomised words
+                        which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum,
+                        you need to be sure there isn't anything embarrassing hidden in the middle of text. </p>
+
+                    <div class="grid grid-cols-3 gap-6">
+                        <div
+                            class="flex flex-col py-9 space-y-4 justify-center items-center border-2 border-dark4 rounded-lg">
+                            <div class="w-16 h-16 rounded-full bg-[#ffebe7] flex justify-center items-center">
+                                <div class="w-12 h-12 rounded-full bg-primary flex justify-center items-center">
+                                    <h4 class="text-xl font-bold text-white">01</h4>
+
+                                </div>
+
+
+                            </div>
+                            <h4 class="text-xl font-bold text-">Step One</h4>
+                            <p class="text-center text-dark2">It uses a dictionary <br> of over 200 .</p>
+                        </div>
+                        <div
+                            class="flex flex-col py-9 space-y-4 justify-center items-center border-2 border-dark4 rounded-lg">
+                            <div class="w-16 h-16 rounded-full bg-[#ffebe7] flex justify-center items-center">
+                                <div class="w-12 h-12 rounded-full bg-primary flex justify-center items-center">
+                                    <h4 class="text-xl font-bold text-white">02</h4>
+
+                                </div>
+
+
+                            </div>
+                            <h4 class="text-xl font-bold text-">Step Two</h4>
+                            <p class="text-center text-dark2">It uses a dictionary <br> of over 200 .</p>
+                        </div>
+                        <div
+                            class="flex flex-col py-9 space-y-4 justify-center items-center border-2 border-dark4 rounded-lg">
+                            <div class="w-16 h-16 rounded-full bg-[#ffebe7] flex justify-center items-center">
+                                <div class="w-12 h-12 rounded-full bg-primary flex justify-center items-center">
+                                    <h4 class="text-xl font-bold text-white">03</h4>
+                                </div>
+                            </div>
+                            <h4 class="text-xl font-bold text-">Step Three</h4>
+                            <p class="text-center text-dark2">It uses a dictionary <br> of over 200 .</p>
+                        </div>
+                    </div>
+
+                    <div class=" h-[350px] w-full  mt-7 rounded-lg bg-cover bg-center">
+                        <video  class=" h-full rounded-lg w-full object-fill" autoplay controls
+                            muted src="video/video1.mp4"></video>
+                    </div>
+                </div>
+                <div>
+                    <div class="rounded-lg p-10 bg-[#F3F3F3] space-y-5">
+                        <h4 class="text-2xl font-bold">Services</h4>
+                        <div class="h-[56px] bg-primary rounded-lg flex justify-between px-5 items-center">
+                            <h4 class="text-white font-semibold">Full Car Repair</h4>
+                            <img class="w-6" src="icons/arrow-white.svg" alt="">
+                        </div>
+                        <div class="h-[56px] bg-white rounded-lg flex justify-between px-5 items-center">
+                            <h4 class="text-dark1 font-semibold">Engine Repair</h4>
+                            <img class="w-6" src="icons/arrow.svg" alt="">
+                        </div>
+                        <div class="h-[56px] bg-white rounded-lg flex justify-between px-5 items-center">
+                            <h4 class="text-dark1 font-semibold">Automatic Services</h4>
+                            <img class="w-6" src="icons/arrow.svg" alt="">
+                        </div>
+                        <div class="h-[56px] bg-white rounded-lg flex justify-between px-5 items-center">
+                            <h4 class="text-dark1 font-semibold">Engine Oil Change</h4>
+                            <img class="w-6" src="icons/arrow.svg" alt="">
+                        </div>
+                        <div class="h-[56px] bg-white rounded-lg flex justify-between px-5 items-center">
+                            <h4 class="text-dark1 font-semibold">Battery Charge</h4>
+                            <img class="w-6" src="icons/arrow.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="bg-dark1 p-10 mt-7 rounded-lg space-y-5">
+                        <h4 class="text-2xl font-bold text-white">Download</h4>
+                        <div class="h-[56px] rounded-lg flex justify-between pl-1 items-center">
+                            <div class="flex gap-3 items-center">
+                                <div>
+                                    <img src="icons/paper.svg" alt="">
+                                </div>
+                                <div class="">
+                                    <h4 class="text-white text-lg">Our Brochure</h4>
+                                    <h4 class="text-dark2">Download</h4>
+                                </div>
+                            </div>
+                            <div class="bg-primary w-14 rounded-lg h-full flex justify-center items-center">
+                                <img src="icons/arrow-white.svg" alt="">
+                            </div>
+
+                        </div>
+                        <div class="h-[56px]  rounded-lg flex justify-between pl-1 items-center">
+                            <div class="flex gap-3 items-center">
+                                <div>
+                                    <img src="icons/paper.svg" alt="">
+                                </div>
+                                <div class="">
+                                    <h4 class="text-white text-lg">Company Details</h4>
+                                    <h4 class="text-dark2">Download</h4>
+                                </div>
+                            </div>
+                            <div class="bg-primary w-14 rounded-lg h-full flex justify-center items-center">
+                                <img src="icons/arrow-white.svg" alt="">
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="bg-dark1 p-10 mt-7 rounded-lg py-12 flex flex-col items-center mb-7">
+
+                        <div class="mb-7">
+                            <div class="flex flex-col font-bold text-white text-2xl items-center mb-5">
+                                <img class="w-36 pb-1" src="icons/logo2.svg" alt="">
+                                <h4>Car Doctor</h4>
+                            </div>
+                            <h4 class="text-center text-white text-lg font-bold">Need Help? We Are Here <br>
+                                To Help You</h4>
+                        </div>
+                        <div
+                            class="bg-white rounded-lg px-8 pt-6 pb-12 text-center relative flex flex-col justify-center items-center">
+                            <h4 class="font-bold text-xl pb-2"> <span class="text-primary">Car Doctor </span> Special
+                            </h4>
+                            <h4 class="font-bold text-dark3">Save up to <span class="text-primary">60% off</span></h4>
+                            <div class="bg-primary rounded-lg py-4 px-8 absolute -bottom-7">
+                                <h4 class="text-lg font-semibold text-white">Get A Quote</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-dark1 text-3xl font-bold pb-7 text-black">Price $250.00</h3>
+                        <button class="w-full py-4 bg-primary text-white rounded-lg text-lg font-semibold">Proceed
+                            Checkout</button>
+                    </div>
+
+                </div>
+            </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-------------------------------------------- Footer Section ---------------------------------->
+
+    <footer class="mt-28 bg-[#151515]">
+        <div class="container mx-auto lg:px-28 px-8">
+            <div class="flex justify-between py-28 item">
+                <div class="flex flex-col  items-start w-4/12">
+                    <div class="flex flex-col font-bold text-white text-xl items-center">
+                        <img class="w-20 pb-1" src="icons/logo2.svg" alt="">
+                        <h4>Car Doctor</h4>
+                    </div>
+                    <p class="text-[#E8E8E8] text-base font-normal py-5">Edwin Diaz is a software and web technologies
+                        engineer, a life coach trainer who is also a serial .</p>
+                    <div class="flex gap-2">
+                        <div class="w-10 h-10 bg-[#2c2c2c] rounded-full flex items-center justify-center">
+                            <img src="icons/gpay.png" alt="">
+                        </div>
+                        <div class="w-10 h-10 bg-[#2c2c2c] rounded-full flex items-center justify-center">
+                            <img src="icons/ttr.png" alt="">
+                        </div>
+                        <div class="w-10 h-10 bg-[#2c2c2c] rounded-full flex items-center justify-center">
+                            <img src="icons/inst.png" alt="">
+                        </div>
+                        <div class="w-10 h-10 bg-[#2c2c2c] rounded-full flex items-center justify-center">
+                            <img src="icons/link.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-xl pb-9 text-white">About</h4>
+                    <ul class="space-y-4 text-[#E8E8E8] text-base">
+                        <li><a href="">Home</a></li>
+                        <li><a href="">Service</a></li>
+                        <li><a href="">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-xl pb-9 text-white">Company</h4>
+                    <ul class="space-y-4 text-[#E8E8E8] text-base">
+                        <li><a href="">Why car doctor</a></li>
+                        <li><a href="">About</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-xl pb-9 text-white">Support</h4>
+                    <ul class="space-y-4 text-[#E8E8E8] text-base">
+                        <li><a href="">Support Center</a></li>
+                        <li><a href="">Feedback</a></li>
+                        <li><a href="">Accessebility</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
