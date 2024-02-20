@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en" class="selection:bg-primary selection:text-white">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car-Doctor</title>
+    <link rel="shortcut icon" href="icons/Group 1.svg" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <style>
+        .font-inter {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#FF3811',
+                        "dark1": '#151515',
+                        "dark2": '#737373',
+                        "dark3": '#444',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="font-inter">
+
+    <!------------------------- Header Section --------------------------->
+
+    <header class="container mx-auto lg:px-28 px-8">
+        <nav class="pt-6">
+            <div class="navbar bg-base-100">
+                <div class="navbar-start">
+                    <div class="dropdown">
+                        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h8m-8 6h16" />
+                            </svg>
+                        </div>
+                        <ul tabindex="0"
+                            class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                            <li><a>Item 1</a></li>
+                            <li>
+                                <a>Parent</a>
+                                <ul class="p-2">
+                                    <li><a>Submenu 1</a></li>
+                                    <li><a>Submenu 2</a></li>
+                                </ul>
+                            </li>
+                            <li><a>Item 3</a></li>
+                        </ul>
+                    </div>
+                    <div class="flex flex-col items-center text-xl font-bold text-dark3">
+                        <img class="w-20 pb-1" src="icons/Group 1.svg" alt="">
+                        <h4>Car Doctor</h4>
+                    </div>
+                </div>
+                <div class="navbar-center hidden lg:flex">
+                    <ul class="menu menu-horizontal pr-[6.7rem] text-base font-semibold text-dark3">
+                        <li><a href="index.html" class="hover:text-primary hover:bg-transparent ">Home</a></li>
+                        <li><a class="hover:text-primary hover:bg-transparent">About</a></li>
+                        <li><a class="hover:text-primary hover:bg-transparent">Services</a></li>
+                        <li><a class="hover:text-primary hover:bg-transparent">Blog</a></li>
+                        <li><a class="hover:text-primary hover:bg-transparent">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="navbar-end space-x-7">
+                    <img class="w-5" src="icons/cart.svg" alt="">
+                    <img class="w-5" src="icons/search.svg" alt="">
+
+                    <a
+                        class="btn border border-primary bg-transparent hover:bg-primary hover:text-white text-primary">Appointment</a>
+                </div>
+            </div>
+        </nav>
+
+        <section class="mt-8">
+            <div
+                class="w-full h-[300px] bg-[linear-gradient(90deg,rgba(0,0,0,0.5),rgba(0,0,0,0.3)),url('./assets/images/checkout/checkout.png')] bg-center bg-cover rounded-lg text-white p-24 space-y-7 flex justify-center flex-col relative">
+                <h1 class="text-white font-bold text-4xl">
+                    Service Details
+                </h1>
+                <div style=" width:330px; border-bottom: 50px solid orangered; border-left:50px solid transparent; border-right: 50px solid transparent"
+                    class="  absolute bottom-0 transform -translate-x-1/2 left-[50%] flex justify-center items-center">
+                    <h4 class="text-xl font-semibold text-white absolute -bottom-[2.4rem]">
+                        Home/Service Details
+                    </h4>
+                </div>
+            </div>
+            </div>
+        </section>
+    </header>
+
+    <!----------- Confirm Order ----------->
+
+
+    <main class="container mx-auto lg:px-28 px-8">
+
+        <form class=" p-20 bg-[#F3F3F3] rounded-lg w-full mt-28">
+            <div class="grid-cols-2 grid gap-5">
+                <div class="col-span-1">
+                    <input placeholder="Service Name" class=" focus:outline-none w-full px-5 py-3 rounded-md"
+                        type="text" name="" id="">
+                </div>
+                <div class="">
+                    <input placeholder="Service Price" class=" focus:outline-none w-full px-5 py-3 rounded-md"
+                        type="text" name="" id="">
+                </div>
+                <div class="col-span-1 ">
+                    <input placeholder="Text here" class=" w-full px-5 py-3 rounded-md" type="number" name="" id="">
+                </div>
+                <div class="">
+                    <input placeholder="Service Type" class="focus:outline-none w-full px-5 py-3 rounded-md" type="email"
+                        name="" id="">
+                </div>
+                <div class="col-span-2">
+                    <textarea placeholder="Product Description"
+                        class="resize-none w-full px-5 py-4 focus:outline-none rounded-md" name="" id="" cols="30"
+                        rows="10"></textarea>
+                </div>
+                <div class="col-span-2">
+                    <button class="btn text-base  bg-primary w-full text-white hover:bg-[#ff5415]">Submit</button>
+                </div>
+            </div>
+
+
+
+        </form>
+
+
+
+
+
+    </main>
+
+    <!-------------------------- Footer Section ----------------------------->
+
+    <footer class="mt-28 bg-[#151515]">
+        <div class="container mx-auto lg:px-28 px-8">
+            <div class="flex justify-between py-28 item">
+                <div class="flex flex-col  items-start w-4/12">
+                    <div class="flex flex-col font-bold text-white text-xl items-center">
+                        <img class="w-20 pb-1" src="icons/logo2.svg" alt="">
+                        <h4>Car Doctor</h4>
+                    </div>
+                    <p class="text-[#E8E8E8] text-base font-normal py-5">Edwin Diaz is a software and web technologies
+                        engineer, a life coach trainer who is also a serial .</p>
+                    <div class="flex gap-2">
+                        <div class="w-10 h-10 bg-[#2c2c2c] rounded-full flex items-center justify-center">
+                            <img src="icons/gpay.png" alt="">
+                        </div>
+                        <div class="w-10 h-10 bg-[#2c2c2c] rounded-full flex items-center justify-center">
+                            <img src="icons/ttr.png" alt="">
+                        </div>
+                        <div class="w-10 h-10 bg-[#2c2c2c] rounded-full flex items-center justify-center">
+                            <img src="icons/inst.png" alt="">
+                        </div>
+                        <div class="w-10 h-10 bg-[#2c2c2c] rounded-full flex items-center justify-center">
+                            <img src="icons/link.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-xl pb-9 text-white">About</h4>
+                    <ul class="space-y-4 text-[#E8E8E8] text-base">
+                        <li><a href="">Home</a></li>
+                        <li><a href="">Service</a></li>
+                        <li><a href="">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-xl pb-9 text-white">Company</h4>
+                    <ul class="space-y-4 text-[#E8E8E8] text-base">
+                        <li><a href="">Why car doctor</a></li>
+                        <li><a href="">About</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-xl pb-9 text-white">Support</h4>
+                    <ul class="space-y-4 text-[#E8E8E8] text-base">
+                        <li><a href="">Support Center</a></li>
+                        <li><a href="">Feedback</a></li>
+                        <li><a href="">Accessebility</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
